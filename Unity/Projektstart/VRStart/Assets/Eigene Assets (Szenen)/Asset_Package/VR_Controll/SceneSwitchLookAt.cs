@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SceneSwitchLookAt : MonoBehaviour {
 	protected string scenename;
 	protected float MyTime = 0f;
-	public int Duration;
+	public float Duration;
 	public Transform RadialProgress;
 	private bool LookAt;
 	

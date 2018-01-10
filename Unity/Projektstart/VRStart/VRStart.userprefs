@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneSwitchOld.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs">
     <Files>
       <File FileName="Assets\Standard Assets\Utility\FPSCounter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneSwitchOld.cs" Line="6" Column="29" />
+      <File FileName="Assets\Scripts\SceneSwitchOld.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" Line="11" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
