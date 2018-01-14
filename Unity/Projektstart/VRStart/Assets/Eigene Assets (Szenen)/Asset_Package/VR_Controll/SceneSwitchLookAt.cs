@@ -35,18 +35,18 @@ public class SceneSwitchLookAt : MonoBehaviour {
 	public void detectLookAt(string NeueSzene){
 		LookAt = true;
 		scenename = NeueSzene;
+		FadingScriptObject.GetComponent<FadeIn>().BeginFade(Duration);
 	}
 	
 	public void detectNoLookAt(){
+		FadingScriptObject.GetComponent<FadeIn>().BeginFade(-Duration);
 		LookAt = false;
 		MyTime = 0f;
 		RadialProgress.GetComponent<Image>().fillAmount = MyTime;
 	}
 	
-	public IEnumerator changeScene(string scenename)
+	public void changeScene(string scenename)
     {
-		float fadeTime = 2f;//FadingScriptObject.GetComponent<FadeIn>().BeginFade(1);
-		yield return new WaitForSeconds(fadeTime);
         Application.LoadLevel(scenename);
     }
 }

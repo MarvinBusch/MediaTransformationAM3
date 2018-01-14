@@ -5,11 +5,11 @@ using UnityEngine;
 public class FadeIn : MonoBehaviour {
 
 	public Texture2D fadeOutTexture;
-	public float fadeSpeed = 0.8f;
+	public float fadeSpeed = 0.2f;
 	
 	private int drawDepth = -1000;
 	private float alpha = 1.0f;
-	private int fadeDir = -1;
+	private float fadeDir = -1.0f;
 	
 	void OnGUI(){
 		alpha += fadeDir * fadeSpeed * Time.deltaTime;
@@ -20,13 +20,13 @@ public class FadeIn : MonoBehaviour {
 		GUI.DrawTexture ( new Rect (0,0, Screen.width, Screen.height), fadeOutTexture );
 	}
 	
-	public float BeginFade (int direction) {
+	public float BeginFade (float direction) {
 		fadeDir = direction;
 		return (fadeSpeed);
 	}
 	
 	void OnLevelWasLoaded(){
-		alpha = 1;
+		//alpha = 1;
 		BeginFade (-1);
 	}
 }
