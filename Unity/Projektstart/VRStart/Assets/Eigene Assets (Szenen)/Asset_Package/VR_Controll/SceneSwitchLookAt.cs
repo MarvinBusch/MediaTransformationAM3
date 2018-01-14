@@ -10,6 +10,7 @@ public class SceneSwitchLookAt : MonoBehaviour {
 	public float Duration;
 	public Transform RadialProgress;
 	private bool LookAt;
+	public GameObject FadingScriptObject;
 	
 	public void Start()
 	{
@@ -42,8 +43,10 @@ public class SceneSwitchLookAt : MonoBehaviour {
 		RadialProgress.GetComponent<Image>().fillAmount = MyTime;
 	}
 	
-	public void changeScene(string scenename)
+	public IEnumerator changeScene(string scenename)
     {
+		float fadeTime = 2f;//FadingScriptObject.GetComponent<FadeIn>().BeginFade(1);
+		yield return new WaitForSeconds(fadeTime);
         Application.LoadLevel(scenename);
     }
 }
