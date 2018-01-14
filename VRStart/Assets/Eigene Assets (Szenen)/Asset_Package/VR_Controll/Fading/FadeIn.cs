@@ -26,7 +26,6 @@ public class FadeIn : MonoBehaviour {
 	}
 	
 	void OnLevelWasLoaded(){
-		//alpha = 1;
 		BeginFade (-1);
 	}
 }
