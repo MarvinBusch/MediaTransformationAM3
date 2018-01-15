@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/ElDorado.unity
+=======
+- path: Assets/Scenes/Start.unity
+>>>>>>> b42d295a660c49b63212d6440512dcca9ded368c
   isLoaded: 1
   isActive: 1
