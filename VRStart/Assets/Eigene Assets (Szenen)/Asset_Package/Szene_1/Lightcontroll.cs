@@ -7,11 +7,17 @@ public class Lightcontroll : MonoBehaviour {
 public float StartTime = 5.0f;
 public float Duration = 10.0f;
 protected float MyTime = 0f;
+
 public Transform[] Lights;
 public float LightIntensity = 1f;
+
 public Transform Flare;
 public float FlareIntensity = 1000f;
 public float FlareBrightness = 5f;
+
+public Transform Augen;
+public float Emission = 0.4f;
+
 private bool Go = false;
 private bool end = false;
 
@@ -43,6 +49,7 @@ private bool end = false;
 			end=true;
 		}
 		if(Go==true){
+			//Augen.GetComponent<Renderer>.material[1].SetColor ("_EmissionColor", Emission * (MyTime/Duration));
 			for(int i=0; i<Lights.Length; i++){
 				Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/Duration);
 			}
