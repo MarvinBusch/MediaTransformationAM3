@@ -87,6 +87,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\MaterialFarbwechselLookAt.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitch.cs" />
