@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Matrix.unity
+=======
+- path: Assets/Scenes/ElDorado.unity
+>>>>>>> 72ebdb7e25bf93a8faec20c3066696c8b57b195e
   isLoaded: 1
   isActive: 1
