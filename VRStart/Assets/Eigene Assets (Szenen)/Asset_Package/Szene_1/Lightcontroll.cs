@@ -43,7 +43,7 @@ private bool end = false;
 			Go=true;
 			Flare.GetComponent<Light>().intensity = FlareIntensity;
 			Flare.GetComponent<LensFlare>().brightness = FlareBrightness;
-			Flare.GetComponent<LensFlare>().fadeSpeed = 0;
+			//Flare.GetComponent<LensFlare>().fadeSpeed = 0;
 		}
 		if(MyTime>Duration&&Go==true){
 			end=true;
@@ -55,6 +55,12 @@ private bool end = false;
 				Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/Duration);
 			}
 		}
+		}
+	}
+	
+	public void FlareFadeAus(){
+		if(Go==true&&MyTime>0){
+			Flare.GetComponent<LensFlare>().fadeSpeed = 0;
 		}
 	}
 }
