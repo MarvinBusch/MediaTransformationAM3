@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/ElDorado.unity
+=======
 - path: Assets/Scenes/Interrogation.unity
+>>>>>>> 559434f3676ecd2eb1d7dbb0b6fd31b72e880e69
   isLoaded: 1
   isActive: 1
