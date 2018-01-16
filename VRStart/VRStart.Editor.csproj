@@ -121,6 +121,10 @@
       <Project>{8D5852A9-7AE7-19E4-5D5D-8EE21AA3A4A3}</Project>
       <Name>VRStart.Plugins</Name>
     </ProjectReference>
+    <ProjectReference Include="VRStart.csproj">
+      <Project>{F63FBDCB-7C92-4A8F-7BF0-8176F11BCD37}</Project>
+      <Name>VRStart</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GoogleVR\Demos\Editor\DemoInputManagerEditor.cs" />
