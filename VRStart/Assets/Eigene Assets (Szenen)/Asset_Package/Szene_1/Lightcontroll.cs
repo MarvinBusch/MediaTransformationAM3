@@ -49,7 +49,8 @@ private bool end = false;
 			end=true;
 		}
 		if(Go==true){
-			//Augen.GetComponent<Renderer>.material[1].SetColor ("_EmissionColor", Emission * (MyTime/Duration));
+			//Augen.material[1].EnableKeyword("_EMISSION");
+			//Augen.GetComponent<Renderer>.material[1].SetColor ("_EmissionScaleUI", Emission * (MyTime/Duration));
 			for(int i=0; i<Lights.Length; i++){
 				Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/Duration);
 			}
