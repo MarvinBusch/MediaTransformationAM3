@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 2b6787c56f415fc4b81ebb6a232bfc23
+timeCreated: 1516146654
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_009
+    100008: Bone_010
+    100010: Bone_011
+    100012: Bone_012
+    100014: Bone_013
+    100016: CHEST
+    100018: Cube
+    100020: Cube_002
+    100022: Cube_003
+    100024: Cube_004
+    100026: Cube_005
+    100028: Cube_006
+    100030: Cube_007
+    100032: Cube_008
+    100034: Cube_009
+    100036: daumem2_L
+    100038: daumem2_R
+    100040: daumen3_L
+    100042: daumen3_R
+    100044: foot_L
+    100046: foot_R
+    100048: hand_L
+    100050: hand_R
+    100052: HEAD
+    100054: HIPS
+    100056: //RootNode
+    100058: lowerarm_L
+    100060: lowerarm_R
+    100062: lowerleg_L
+    100064: lowerleg_R
+    100066: middlefinger2_L
+    100068: middlefinger2_L_001
+    100070: middlefinger2_L_002
+    100072: middlefinger2_L_003
+    100074: middlefinger2_R
+    100076: middlefinger3_L
+    100078: middlefinger3_L_001
+    100080: middlefinger3_L_002
+    100082: middlefinger3_L_003
+    100084: middlefinger3_R
+    100086: NEKC
+    100088: Plane
+    100090: Plane_001
+    100092: SHOULDER_L
+    100094: SHOULDER_R
+    100096: SPINE
+    100098: Upperarm_L
+    100100: Upperarm_R
+    100102: Upperleg_L
+    100104: Upperleg_R
+    100106: zehen_L
+    100108: zehen_R
+    400000: Armature
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_009
+    400008: Bone_010
+    400010: Bone_011
+    400012: Bone_012
+    400014: Bone_013
+    400016: CHEST
+    400018: Cube
+    400020: Cube_002
+    400022: Cube_003
+    400024: Cube_004
+    400026: Cube_005
+    400028: Cube_006
+    400030: Cube_007
+    400032: Cube_008
+    400034: Cube_009
+    400036: daumem2_L
+    400038: daumem2_R
+    400040: daumen3_L
+    400042: daumen3_R
+    400044: foot_L
+    400046: foot_R
+    400048: hand_L
+    400050: hand_R
+    400052: HEAD
+    400054: HIPS
+    400056: //RootNode
+    400058: lowerarm_L
+    400060: lowerarm_R
+    400062: lowerleg_L
+    400064: lowerleg_R
+    400066: middlefinger2_L
+    400068: middlefinger2_L_001
+    400070: middlefinger2_L_002
+    400072: middlefinger2_L_003
+    400074: middlefinger2_R
+    400076: middlefinger3_L
+    400078: middlefinger3_L_001
+    400080: middlefinger3_L_002
+    400082: middlefinger3_L_003
+    400084: middlefinger3_R
+    400086: NEKC
+    400088: Plane
+    400090: Plane_001
+    400092: SHOULDER_L
+    400094: SHOULDER_R
+    400096: SPINE
+    400098: Upperarm_L
+    400100: Upperarm_R
+    400102: Upperleg_L
+    400104: Upperleg_R
+    400106: zehen_L
+    400108: zehen_R
+    2300000: Cube_004
+    2300002: Cube_005
+    2300004: Cube_006
+    2300006: Cube_007
+    2300008: Cube_008
+    2300010: Plane_001
+    3300000: Cube_004
+    3300002: Cube_005
+    3300004: Cube_006
+    3300006: Cube_007
+    3300008: Cube_008
+    3300010: Plane_001
+    4300000: Plane_001
+    4300002: Cube_008
+    4300004: Cube_007
+    4300006: Cube_006
+    4300008: Cube_005
+    4300010: Cube_009
+    4300012: Plane
+    4300014: Cube_004
+    4300016: Cube
+    4300018: Cube_002
+    4300020: Cube_003
+    7400000: Default Take
+    7400002: ArmatureAction
+    9500000: //RootNode
+    13700000: Cube
+    13700002: Cube_002
+    13700004: Cube_003
+    13700006: Cube_009
+    13700008: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
