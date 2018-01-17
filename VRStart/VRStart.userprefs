@@ -5,8 +5,8 @@
       <File FileName="Assets\Standard Assets\Utility\FPSCounter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SceneSwitchOld.cs" Line="1" Column="1" />
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" Line="52" Column="5" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" Line="18" Column="3" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" Line="65" Column="5" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

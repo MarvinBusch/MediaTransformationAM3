@@ -62,6 +62,7 @@ public class MatrixLightControl : MonoBehaviour {
 					Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/Duration);
 				}
 				Türe.GetComponent<Light>().intensity = LightIntensityTüre * (MyTime/Duration);
+
 				/*Hand_U.GetComponent<Renderer>().material.color = new Color (Hand_U.GetComponent<Renderer>().material.color.r, Hand_U.GetComponent<Renderer>().material.color.g, Hand_U.GetComponent<Renderer>().material.color.b, 1 * (MyTime/Duration));
 				Hand_D.GetComponent<Renderer> ().material.color = new Color (Hand_D.GetComponent<Renderer>().material.color.r, Hand_D.GetComponent<Renderer>().material.color.g, Hand_D.GetComponent<Renderer>().material.color.b, 1 * (MyTime/Duration));
 				Pille_U.GetComponent<Renderer>().material.color = new Color (Pille_U.GetComponent<Renderer>().material.color.r, Pille_U.GetComponent<Renderer>().material.color.g, Pille_U.GetComponent<Renderer>().material.color.b, 0);
