@@ -46,6 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" />
+     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\HeadMovment.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\MaterialFarbwechselLookAt.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitch.cs" />
      <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" />
@@ -234,7 +239,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
- <HintPath>C:/Eigene Dateien/Uni/Media Transformation/MediaTransformationAM3/Unity/Projektstart/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+ <HintPath>C:/Eigene Dateien/Uni/Media Transformation/MediaTransformationAM3/VRStart/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
