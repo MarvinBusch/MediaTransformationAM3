@@ -72,7 +72,7 @@ private bool AudioPlay = false;
 				MenschTisch.SetActive(true);
 				MenschTüre.SetActive(false);
 				StartTuere=false;
-				MenschTisch.GetComponent<Animation>().clip.legacy = true;
+				//MenschTisch.GetComponent<Animation>().clip.legacy = true;
 			}		
 			if(StartTuere==true)
 			{
