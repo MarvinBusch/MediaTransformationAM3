@@ -87,6 +87,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\GlobeDrehen.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" />
