@@ -16,8 +16,8 @@ public class GlobeDrehen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Namen.transform.Rotate(0, 0, namenSpeed * Time.deltaTime);
-		Unten.transform.Rotate(0, 0, untenSpeed * Time.deltaTime);
-		Oben.transform.Rotate(0, 0, obenSpeed * Time.deltaTime);
+		Namen.transform.Rotate(0, namenSpeed * Time.deltaTime, 0);
+		Unten.transform.Rotate(0, untenSpeed * Time.deltaTime, 0);
+		Oben.transform.Rotate(0, obenSpeed * Time.deltaTime, 0);
 	}
 }

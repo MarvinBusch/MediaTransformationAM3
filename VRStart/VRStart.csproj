@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\GlobeDrehen.cs" />
+    <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\End\ScreenBig.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\SoundControl.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\HeadMovment.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\MaterialFarbwechselLookAt.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitch.cs" />
+    <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchAnimationEnd.cs" />
     <Compile Include="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
