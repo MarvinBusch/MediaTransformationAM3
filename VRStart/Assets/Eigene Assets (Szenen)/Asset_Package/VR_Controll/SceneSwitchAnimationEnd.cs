@@ -33,7 +33,7 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 	public void Update()
 	{
 			MyTime += Time.deltaTime;
-			if (MyTime > AnimationLength - FadeDuration)
+			if (MyTime > m_CurrentClipInfo[0].clip.length - FadeDuration)
 			{
 				if (ResetMytime==false){
 					ResetMytime=true;
