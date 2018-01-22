@@ -51,6 +51,9 @@ public class MatrixLightControl : MonoBehaviour {
 				MyTime=0;
 				Hände.SetActive(true);
 				Go=true;
+				Hände.GetComponent<Animator>().SetBool("PlayBool", true);
+				Pille_D.GetComponent<Animator>().SetBool("PlayBool", true);
+				Pille_U.GetComponent<Animator>().SetBool("PlayBool", true);				
 				//Raum.transform.localScale += new Vector3(0, 0, -5);
 				//MatrixRegen.Stop();
 			}
