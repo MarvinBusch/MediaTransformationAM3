@@ -13,6 +13,7 @@ public float WaitTime = 5.0f;
 public float DurationTuere = 5f;
 
 public GameObject MenschTüre;
+private Animator MenschAnim;
 public GameObject MenschTisch;
 
 public Transform[] Lights;
@@ -23,6 +24,7 @@ public float FlareIntensity = 1000f;
 public float FlareBrightness = 5f;
 
 public GameObject Audio;
+public GameObject Lampe;
 
 private bool StartTuere = false;
 private bool TuereAuf = false;
@@ -52,6 +54,7 @@ private bool AudioPlay = false;
 		Flare.GetComponent<LensFlare>().fadeSpeed = 1000;
 		MenschTisch.SetActive(false);
 		MenschTüre.SetActive(false);
+		MenschAnim = MenschTisch.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -72,7 +75,6 @@ private bool AudioPlay = false;
 				MenschTisch.SetActive(true);
 				MenschTüre.SetActive(false);
 				StartTuere=false;
-				MenschTisch.GetComponent<Animation>().clip.legacy = true;
 			}		
 			if(StartTuere==true)
 			{
@@ -93,6 +95,7 @@ private bool AudioPlay = false;
 			if(end==false){
 				MyTime += Time.deltaTime;
 				if(MyTime>WaitTime&&Go==false){
+					Lampe.GetComponent<AudioSource>().Play();
 					MyTime=0;
 					Go=true;
 					Flare.GetComponent<Light>().intensity = FlareIntensity;
@@ -113,10 +116,12 @@ private bool AudioPlay = false;
 			if(AudioPlay==false){
 				Audio.GetComponent<AudioSource>().Play();
 				MyTime=0;
-				MenschTisch.GetComponent<Animator>().Play("ArmatureAction");
+				MenschAnim.SetBool("PlayBool", true);
 				AudioPlay=true;
 				}
 			else{MyTime+= Time.deltaTime;}
+			if (MyTime>3f){MenschAnim.enabled = false;}
+			if (MyTime>Audio.GetComponent<AudioSource>().clip.length - 1f){MenschAnim.enabled = true; MenschAnim.speed = 2.5f;}
 			if(MyTime>Audio.GetComponent<AudioSource>().clip.length)
 			{	
 				Application.LoadLevel("Matrix");

@@ -8,6 +8,9 @@ public class SoundControl : MonoBehaviour {
 	public GameObject Flare;
 	protected float brightness;
 	protected bool AudioEnded=false;
+	public GameObject Türe;
+	public GameObject Mensch;
+	public GameObject Lampe;
 	
 	void Start() {
 		brightness = Flare.GetComponent<LensFlare>().brightness;
@@ -19,8 +22,15 @@ public class SoundControl : MonoBehaviour {
 		MyTime += Time.deltaTime;
 		if(Flare.GetComponent<LensFlare>().brightness != brightness)
 		{
-			GetComponent<AudioSource>().Play();
+			//Lampe.GetComponent<PlayAudio>().Playing();
 			MyTime=0f;
+			AudioEnded=true;
+		}
+		if(MyTime>Lampe.GetComponent<AudioSource>().clip.length&&AudioEnded==true)
+		{	
+			//GetComponent<AudioSource>().Play();
+			AudioEnded=false;
+			MyTime=0;
 		}
 		if(MyTime>GetComponent<AudioSource>().clip.length)
 		{	

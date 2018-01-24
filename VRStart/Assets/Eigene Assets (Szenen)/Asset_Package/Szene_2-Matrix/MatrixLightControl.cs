@@ -40,7 +40,7 @@ public class MatrixLightControl : MonoBehaviour {
 		Hand_D.GetComponent<Renderer> ().material.color = new Color (Hand_D.GetComponent<Renderer>().material.color.r, Hand_D.GetComponent<Renderer>().material.color.g, Hand_D.GetComponent<Renderer>().material.color.b, 0);
 		Pille_U.GetComponent<Renderer>().material.color = new Color (Pille_U.GetComponent<Renderer>().material.color.r, Pille_U.GetComponent<Renderer>().material.color.g, Pille_U.GetComponent<Renderer>().material.color.b, 0);
 		Pille_D.GetComponent<Renderer> ().material.color = new Color (Pille_D.GetComponent<Renderer>().material.color.r, Pille_D.GetComponent<Renderer>().material.color.g, Pille_D.GetComponent<Renderer>().material.color.b, 0);
-		*/Raum.transform.localScale += new Vector3(0, 0, 5);
+		*/ //Raum.transform.localScale += new Vector3(0, 0, 5);
 	}
 	
 	// Update is called once per frame
@@ -51,7 +51,10 @@ public class MatrixLightControl : MonoBehaviour {
 				MyTime=0;
 				Hände.SetActive(true);
 				Go=true;
-				Raum.transform.localScale += new Vector3(0, 0, -5);
+				Hände.GetComponent<Animator>().SetBool("PlayBool", true);
+				Pille_D.GetComponent<Animator>().SetBool("PlayBool", true);
+				Pille_U.GetComponent<Animator>().SetBool("PlayBool", true);				
+				//Raum.transform.localScale += new Vector3(0, 0, -5);
 				//MatrixRegen.Stop();
 			}
 			if(MyTime>Duration&&Go==true){
@@ -62,6 +65,7 @@ public class MatrixLightControl : MonoBehaviour {
 					Lights[i].GetComponent<Light>().intensity = LightIntensity * (MyTime/Duration);
 				}
 				Türe.GetComponent<Light>().intensity = LightIntensityTüre * (MyTime/Duration);
+
 				/*Hand_U.GetComponent<Renderer>().material.color = new Color (Hand_U.GetComponent<Renderer>().material.color.r, Hand_U.GetComponent<Renderer>().material.color.g, Hand_U.GetComponent<Renderer>().material.color.b, 1 * (MyTime/Duration));
 				Hand_D.GetComponent<Renderer> ().material.color = new Color (Hand_D.GetComponent<Renderer>().material.color.r, Hand_D.GetComponent<Renderer>().material.color.g, Hand_D.GetComponent<Renderer>().material.color.b, 1 * (MyTime/Duration));
 				Pille_U.GetComponent<Renderer>().material.color = new Color (Pille_U.GetComponent<Renderer>().material.color.r, Pille_U.GetComponent<Renderer>().material.color.g, Pille_U.GetComponent<Renderer>().material.color.b, 0);
