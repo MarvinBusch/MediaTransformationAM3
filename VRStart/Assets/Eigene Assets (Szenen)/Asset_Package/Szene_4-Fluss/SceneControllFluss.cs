@@ -12,6 +12,7 @@ public class SceneControllFluss : MonoBehaviour {
 	public GameObject SoundUtopie;
 	public GameObject SoundDystopie;
 	public GameObject Wilhelm;
+	public GameObject Kind;
 	public GameObject Regen;
 	
 	public GameObject SceneEndObject;
@@ -49,9 +50,9 @@ public class SceneControllFluss : MonoBehaviour {
 		}	
 		else{
 			Audio = SoundUtopie.GetComponent<AudioSource>();
+			Audio2 = Kind.GetComponent<AudioSource>();
 			NewColor = new Color (0f,0.5f,0.5f);
 			Boot.GetComponent<Animator>().SetBool("Utopie",true);
-			Debug.Log("Utopie");
 		}
 	}
 	
@@ -62,17 +63,13 @@ public class SceneControllFluss : MonoBehaviour {
 			RenderSettings.skybox.SetColor("_Tint", Color.Lerp(Color.grey, NewColor, step));
 			step += Time.deltaTime / duration;
 		}
-		if(MundGeschlossen==true){
-			if(MyTime>2){Audio.Stop();Audio2.Play();}
+		if(MundGeschlossen==true||kinder==true){
+			if(MyTime>2){Audio.Stop(); Audio2.Play();}
 			if(MyTime>2+Audio2.GetComponent<AudioSource>().clip.length){Application.LoadLevel("End");}
 		}
 		if(startRegen==true){
 			if(MyTime<10){Regen.GetComponent<DigitalRuby.RainMaker.RainScript>().RainIntensity = 1 * (MyTime/10);}
 		}
-		if(kinder==true){
-			Application.LoadLevel("End");
-		}
-		
 	}
 	
 	public void StartRegen(){

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
+
 
 public class ScreenBig : MonoBehaviour {
 
@@ -21,29 +23,34 @@ public class ScreenBig : MonoBehaviour {
 	protected float LocalPositionX;
 	protected float LocalPositionY;
 	protected float LocalPositionZ;
+
+	public GameObject VideoObj;
 	
 	// Use this for initialization
 	void Start () {
-	lookAt=false;
-	countMytime=false;
-	MyTime=0;
-	LocalScaleX =transform.localScale.x;
-	LocalScaleY =transform.localScale.y;
-	LocalScaleZ =transform.localScale.z;
-	LocalPositionX =transform.localPosition.x;
-	LocalPositionY =transform.localPosition.y;
-	LocalPositionZ =transform.localPosition.z;
+		lookAt=false;
+		countMytime=false;
+		MyTime=0;
+		LocalScaleX =transform.localScale.x;
+		LocalScaleY =transform.localScale.y;
+		LocalScaleZ =transform.localScale.z;
+		LocalPositionX =transform.localPosition.x;
+		LocalPositionY =transform.localPosition.y;
+		LocalPositionZ =transform.localPosition.z;
+		VideoObj.GetComponent<VideoPlayer> ().frame = 2;
+		VideoObj.GetComponent<VideoPlayer> ().Play();
+		VideoObj.GetComponent<VideoPlayer> ().Pause();
 	}
 	// Update is called once per frame
 	void Update () {
 		MyTime += Time.deltaTime;
 		
 		if(lookAt==true){
-			if(transform.localScale.x < LocalScaleX * MultiplierScale){
+			//if(transform.localScale.x < LocalScaleX * MultiplierScale){
 					transform.localScale = new Vector3(LocalScaleX * MultiplierScale, LocalScaleY * MultiplierScale, LocalScaleZ * MultiplierScale);
 					transform.localPosition = new Vector3(LocalPositionX * MultiplierPosition, LocalPositionY * MultiplierPosition, LocalPositionZ * MultiplierPosition);
-			}
-			else countMytime=false;
+			//}
+			//else countMytime=false;
 
 		}
 		else{
@@ -52,11 +59,9 @@ public class ScreenBig : MonoBehaviour {
 					transform.localPosition = new Vector3(transform.localPosition.x * (1/MultiplierPosition), transform.localPosition.y * (1/MultiplierPosition), transform.localPosition.z * (1/MultiplierPosition));
 			}
 			else countMytime=false;
-
 		}
-		
 	}
-	
+
 	public void ScreenLookAt(){
 		lookAt=true;
 		countMytime=true;
@@ -66,5 +71,13 @@ public class ScreenBig : MonoBehaviour {
 		lookAt=false;
 		countMytime=true;
 		MyTime=0;
+	}
+
+	public void PlayVideo (){
+		VideoObj.GetComponent<VideoPlayer>().Play();
+	}
+
+	public void StopVideo (){
+		VideoObj.GetComponent<VideoPlayer>().Pause();
 	}
 }
