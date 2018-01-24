@@ -22,11 +22,7 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 	public GameObject FadingScriptObject;
 
 	public void Start(){
-		m_Animator = AnimationObject.GetComponent<Animator>();
-		m_CurrentClipInfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
-		AnimationLength = m_CurrentClipInfo[0].clip.length;
-
-		ResetMytime=false;
+		SetAnimationLength();
 	}
 	
 	
@@ -53,4 +49,17 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
     {
         Application.LoadLevel(scenename);
     }
+	
+	public void SetAnimationLength(){
+		m_Animator = AnimationObject.GetComponent<Animator>();
+		m_CurrentClipInfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
+		AnimationLength = m_CurrentClipInfo[0].clip.length;
+
+		ResetMytime=false;
+	}
+	
+	public void ChangeAnimObj(GameObject NeuesAnimationObjekt){
+			AnimationObject = NeuesAnimationObjekt;
+			SetAnimationLength();
+	}
 }
