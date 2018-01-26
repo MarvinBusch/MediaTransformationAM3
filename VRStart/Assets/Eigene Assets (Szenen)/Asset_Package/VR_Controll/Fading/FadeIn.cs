@@ -4,28 +4,38 @@ using UnityEngine;
 
 public class FadeIn : MonoBehaviour {
 
-	public Texture2D fadeOutTexture;
 	public float fadeSpeed = 0.2f;
-	
+
 	private int drawDepth = -1000;
 	private float alpha = 1.0f;
 	private float fadeDir = -1.0f;
-	
-	void OnGUI(){
-		alpha += fadeDir * fadeSpeed * Time.deltaTime;
-		alpha = Mathf.Clamp01(alpha);
+	private Color NewColor;
+	private float FadingIn;
+
+	void Start(){
+		NewColor = new Color (0f,0f,0f,1);	
+		GetComponent<Renderer> ().material.SetColor ("_Color", NewColor);
+	}
+
+	void Update(){
 		
-		GUI.color = new Color (GUI.color.r, GUI.color.g, GUI.color.b, alpha);
-		GUI.depth = drawDepth;
-		GUI.DrawTexture ( new Rect (0,0, Screen.width, Screen.height), fadeOutTexture );
+		if (alpha <= 1 || alpha >= 0) {
+			alpha += fadeDir * fadeSpeed * Time.deltaTime;
+			alpha = Mathf.Clamp01 (alpha);
+			NewColor = new Color (0f, 0f, 0f, alpha);
+			GetComponent<Renderer> ().material.SetColor ("_Color", NewColor);
+		}
 	}
-	
-	public float BeginFade (float direction) {
-		fadeDir = direction;
-		return (fadeSpeed);
+
+	public void BeginFadeIng (float directionIn) {
+		if (alpha<=0){fadeDir = directionIn;}
 	}
-	
+
+	public void BeginFadeOut (float directionOut) {
+		fadeDir = directionOut;
+	}
+
 	void OnLevelWasLoaded(){
-		BeginFade (-1);
+		BeginFadeIng(-1);
 	}
 }

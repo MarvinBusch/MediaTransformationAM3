@@ -17,8 +17,8 @@ public class MatrixLightControl : MonoBehaviour {
 	public Transform Raum;
 	public GameObject Hände;
 	public ParticleSystem MatrixRegen;
-	public GameObject Hand_D;
-	public GameObject Hand_U;
+	//public GameObject Hand_D;
+	//public GameObject Hand_U;
 	public GameObject Pille_D;
 	public GameObject Pille_U;
 
@@ -52,8 +52,8 @@ public class MatrixLightControl : MonoBehaviour {
 				Hände.SetActive(true);
 				Go=true;
 				Hände.GetComponent<Animator>().SetBool("PlayBool", true);
-				Pille_D.GetComponent<Animator>().SetBool("PlayBool", true);
-				Pille_U.GetComponent<Animator>().SetBool("PlayBool", true);				
+				//Pille_D.GetComponent<Animator>().SetBool("PlayBool", true);
+				//Pille_U.GetComponent<Animator>().SetBool("PlayBool", true);				
 				//Raum.transform.localScale += new Vector3(0, 0, -5);
 				//MatrixRegen.Stop();
 			}

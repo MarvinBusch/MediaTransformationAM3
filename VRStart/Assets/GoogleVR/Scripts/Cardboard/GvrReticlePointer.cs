@@ -215,6 +215,4 @@ public class GvrReticlePointer : GvrBasePointer {
     mesh.Optimize();
 #endif  // !UNITY_5_5_OR_NEWER
   }
-
- 
 }

@@ -12,12 +12,16 @@ public class SceneControllFluss : MonoBehaviour {
 	public GameObject SoundUtopie;
 	public GameObject SoundDystopie;
 	public GameObject Wilhelm;
-	public GameObject Kind;
+	public GameObject KinderLachen;
 	public GameObject Regen;
-	
-	public GameObject SceneEndObject;
+
+	public GameObject FadingScriptObject;
+
+	public GameObject[] Lichter;
+	//public GameObject SceneEndObject;
 	private AudioSource Audio;
 	private AudioSource Audio2;
+	public GameObject Erdbeben;
 	private float MyTime=0f;
 	private float step=0f;
 	public float duration = 60.0F;
@@ -26,6 +30,7 @@ public class SceneControllFluss : MonoBehaviour {
 	private bool MundGeschlossen=false;
 	private bool startRegen=false;
 	private bool kinder=false;
+
 	
 	private Color NewColor;
 
@@ -40,7 +45,7 @@ public class SceneControllFluss : MonoBehaviour {
 		kinder = false;
 		Regen.GetComponent<DigitalRuby.RainMaker.RainScript>().RainIntensity = 0;
 		
-		//SaveVariable.Utopie=true; // Testing Utopie Dystopie
+		//SaveVariable.Utopie=false; // Testing Utopie Dystopie
 		
 		if(SaveVariable.Utopie==false){
 			Audio = SoundDystopie.GetComponent<AudioSource>();
@@ -50,7 +55,7 @@ public class SceneControllFluss : MonoBehaviour {
 		}	
 		else{
 			Audio = SoundUtopie.GetComponent<AudioSource>();
-			Audio2 = Kind.GetComponent<AudioSource>();
+			Audio2 = KinderLachen.GetComponent<AudioSource>();
 			NewColor = new Color (0f,0.5f,0.5f);
 			Boot.GetComponent<Animator>().SetBool("Utopie",true);
 		}
@@ -64,8 +69,11 @@ public class SceneControllFluss : MonoBehaviour {
 			step += Time.deltaTime / duration;
 		}
 		if(MundGeschlossen==true||kinder==true){
-			if(MyTime>2){Audio.Stop(); Audio2.Play();}
-			if(MyTime>2+Audio2.GetComponent<AudioSource>().clip.length){Application.LoadLevel("End");}
+			if(MyTime>2){
+				/*Audio.Stop();*/ Audio2.Play();				
+				FadingScriptObject.GetComponent<FadeIn>().BeginFadeOut(1/Audio2.GetComponent<AudioSource>().clip.length);
+			}
+			if(MyTime>2+Audio2.GetComponent<AudioSource>().clip.length){RenderSettings.skybox.SetColor("_Tint", Color.grey);Application.LoadLevel("End");}
 		}
 		if(startRegen==true){
 			if(MyTime<10){Regen.GetComponent<DigitalRuby.RainMaker.RainScript>().RainIntensity = 1 * (MyTime/10);}
@@ -79,6 +87,7 @@ public class SceneControllFluss : MonoBehaviour {
 		Schaedel.GetComponent<Animator>().SetBool("MundOeffnen", true);
 	}
 	public void ObjectRise(){
+		Erdbeben.GetComponent<AudioSource>().Play();
 		Steg.GetComponent<Animator>().SetBool("ObjectRise", true);
 		Schaedel.GetComponent<Animator>().SetBool("ObjectRise", true);
 		Player.GetComponent<Animator>().SetBool("ObjectRise", true);
@@ -95,6 +104,7 @@ public class SceneControllFluss : MonoBehaviour {
 	
 	public void Kinder(){
 		kinder=true;	
+		MyTime=0;
 	}
 	
 }

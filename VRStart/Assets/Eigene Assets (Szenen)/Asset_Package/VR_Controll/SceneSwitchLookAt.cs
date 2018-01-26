@@ -8,14 +8,14 @@ public class SceneSwitchLookAt : MonoBehaviour {
 	protected string scenename;
 	protected float MyTime = 0f;
 	public float Duration;
-	public Transform RadialProgress;
+//	public Transform RadialProgress;
 	private bool LookAt;
 	public GameObject FadingScriptObject;
 	
 	public void Start()
 	{
 		LookAt=false;
-		RadialProgress.GetComponent<Image>().fillAmount = MyTime;
+//		RadialProgress.GetComponent<Image>().fillAmount = MyTime;
 	}
 	
 	public void Update()
@@ -23,7 +23,7 @@ public class SceneSwitchLookAt : MonoBehaviour {
 			{
 			MyTime += Time.deltaTime;
 			
-			RadialProgress.GetComponent<Image>().fillAmount = MyTime/Duration;
+			//RadialProgress.GetComponent<Image>().fillAmount = MyTime/Duration;
 			
 			if (MyTime >= Duration)
 			{
@@ -31,22 +31,22 @@ public class SceneSwitchLookAt : MonoBehaviour {
 			}
 		}
 	}
-	
+
 	public void detectLookAt(string NeueSzene){
 		LookAt = true;
 		scenename = NeueSzene;
 		if (FadingScriptObject){
-			FadingScriptObject.GetComponent<FadeIn>().BeginFade(1/(Duration)*1.75f);
+			FadingScriptObject.GetComponent<FadeIn>().BeginFadeIng(2.4f);
 		}
 	}
 	
 	public void detectNoLookAt(){
 		if (FadingScriptObject){
-			FadingScriptObject.GetComponent<FadeIn>().BeginFade(-4);
+			FadingScriptObject.GetComponent<FadeIn>().BeginFadeOut(-4);
 		}
 		LookAt = false;
 		MyTime = 0f;
-		RadialProgress.GetComponent<Image>().fillAmount = MyTime;
+		//RadialProgress.GetComponent<Image>().fillAmount = MyTime;
 	}
 	
 	public void changeScene(string scenename)

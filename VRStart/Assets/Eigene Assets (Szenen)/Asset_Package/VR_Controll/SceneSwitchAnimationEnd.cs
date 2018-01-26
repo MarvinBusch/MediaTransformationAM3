@@ -33,7 +33,8 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
 			{
 				if (ResetMytime==false){
 					ResetMytime=true;
-					FadingScriptObject.GetComponent<FadeIn>().BeginFade(1/(FadeDuration)*2.5f);
+					FadingScriptObject.GetComponent<FadeIn>().BeginFadeIng(FadeDuration);
+				Debug.Log("Fade");
 					MyTime=0;
 				}
 			}
@@ -50,7 +51,7 @@ public class SceneSwitchAnimationEnd : MonoBehaviour {
         Application.LoadLevel(scenename);
     }
 	
-	public void SetAnimationLength(){
+	void SetAnimationLength(){
 		m_Animator = AnimationObject.GetComponent<Animator>();
 		m_CurrentClipInfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
 		AnimationLength = m_CurrentClipInfo[0].clip.length;
