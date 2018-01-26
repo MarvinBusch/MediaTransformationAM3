@@ -3,43 +3,16 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\SceneControllFluss.cs">
     <Files>
       <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\End\ScreenBig.cs" Line="1" Column="1" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerMundZu.cs" Line="10" Column="60" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\SceneControllFluss.cs" Line="74" Column="62" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerKinder.cs" Line="10" Column="57" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" Line="35" Column="40" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" Line="104" Column="6" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\GazeAnimation.cs" Line="29" Column="2" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" Line="32" Column="3" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" Line="45" Column="4" />
-      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchAnimationEnd.cs" Line="36" Column="71" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerMundZu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\SceneControllFluss.cs" Line="48" Column="5" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_4-Fluss\TriggerKinder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_2-Matrix\MatrixLightControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\Szene_1\Lightcontroll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\GazeAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\Fading\FadeIn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchLookAt.cs" Line="1" Column="1" />
+      <File FileName="Assets\Eigene Assets (Szenen)\Asset_Package\VR_Controll\SceneSwitchAnimationEnd.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="VRStart" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Eigene Assets (Szenen)" expanded="True">
-                <Node name="Asset_Package" expanded="True">
-                  <Node name="Szene_1" expanded="True" />
-                  <Node name="Szene_2-Matrix" expanded="True" />
-                  <Node name="Szene_4-Fluss" expanded="True">
-                    <Node name="SceneControllFluss.cs" selected="True" />
-                  </Node>
-                  <Node name="VR_Controll" expanded="True">
-                    <Node name="Fading" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="VRStart" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

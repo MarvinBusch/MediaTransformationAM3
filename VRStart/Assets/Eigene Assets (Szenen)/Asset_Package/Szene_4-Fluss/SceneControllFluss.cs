@@ -45,7 +45,7 @@ public class SceneControllFluss : MonoBehaviour {
 		kinder = false;
 		Regen.GetComponent<DigitalRuby.RainMaker.RainScript>().RainIntensity = 0;
 		
-		//SaveVariable.Utopie=false; // Testing Utopie Dystopie
+		//SaveVariable.Utopie=true; // Testing Utopie Dystopie
 		
 		if(SaveVariable.Utopie==false){
 			Audio = SoundDystopie.GetComponent<AudioSource>();
@@ -73,7 +73,7 @@ public class SceneControllFluss : MonoBehaviour {
 				/*Audio.Stop();*/ Audio2.Play();				
 				FadingScriptObject.GetComponent<FadeIn>().BeginFadeOut(1/Audio2.GetComponent<AudioSource>().clip.length);
 			}
-			if(MyTime>2+Audio2.GetComponent<AudioSource>().clip.length){RenderSettings.skybox.SetColor("_Tint", Color.grey);Application.LoadLevel("End");}
+			if(MyTime>2+Audio2.GetComponent<AudioSource>().clip.length){/*RenderSettings.skybox.SetColor("_Tint", Color.grey);*/Application.LoadLevel("End");}
 		}
 		if(startRegen==true){
 			if(MyTime<10){Regen.GetComponent<DigitalRuby.RainMaker.RainScript>().RainIntensity = 1 * (MyTime/10);}
